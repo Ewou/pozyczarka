@@ -1,0 +1,33 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'bin/bundle'
+
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'app/helpers/application_helper.rb'
+    - 'config/application.rb'
+    - 'bin/bundle'
+
+  Style/IfUnlessModifier:
+    Exclude:
+      - 'bin/bundle'
+
+  Metrics/BlockLength:
+    Max: 47
+
+  Metrics/CyclomaticComplexity:
+    Max: 9
+
+  Metrics/MethodLength:
+    Max: 12
+
+  Metrics/PerceivedComplexity:
+    Max: 9
+
+  Layout/LineLength:
+    Max: 198
