@@ -1,8 +1,12 @@
-require: rubocop-rails
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
 
 AllCops:
   Exclude:
     - 'bin/bundle'
+    - 'lib/tasks/auto_annotate_models.rake'
 
 
 Style/Documentation:
