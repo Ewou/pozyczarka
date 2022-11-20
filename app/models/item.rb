@@ -16,4 +16,10 @@ class Item < ApplicationRecord
   validates :name, presence: { message: "cannot be empty" }, length: { minimum: 3 }
 
   enum item_type: %i[book CD press game electric_device kitchen_utensil tool other]
+
+  scope :active, -> {where(active: true)}
+  scope :inactive, -> {where(active: false)}
+  scope :borrowed, -> {where(borrowed: true)}
+  scope :on_place, -> {where(borrowed: false)}
+
 end
