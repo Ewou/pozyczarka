@@ -1,0 +1,25 @@
+<div id="<%= dom_id item %>" class="container-fluid">
+
+<table class="table">
+  <thead>
+  <tr>
+    <td>Name</td>
+    <td class="text-center">Active</td>
+    <td class="text-center">Borrowed</td>
+    <td class="text-center">Type</td>
+  </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th><%= item.name %></th>
+      <th class="text-center"><%= item.active ? '✔️' : '❌' %></th>
+      <th class="text-center"><%= item.borrowed ? '✔️' : '❌' %></th>
+      <th class="text-center"><%= item.item_type %></th>
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
