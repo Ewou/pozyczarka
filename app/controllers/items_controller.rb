@@ -56,6 +56,21 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def active
+    @items = Item.where(active: true)
+  end
+
+  def inactive
+    @items = Item.where(active: false)
+  end
+
+  def borrowed
+    @items = Item.where(borrowed: true)
+  end
+
+  def on_place
+    @items = Item.where(borrowed: false)
+  end
 
   private
 
